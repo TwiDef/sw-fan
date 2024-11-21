@@ -1,0 +1,36 @@
+.goBackBtn {
+    position: relative;
+/*     font-family: 'Star Wars', sans-serif; */
+    transition: all .1s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin: 30px auto 0;
+    font-size: 20px;
+    font-weight: 600;
+    background: none;
+    color: var(--color-light-red);
+}
+.goBackBtn span {
+    position: absolute;
+    font-size: 40px;
+    top: -16px;
+    left: -42px;
+} 
+
+.goBackBtn:hover {
+    text-shadow: 0px 2px 15px var(--color-light-blue),
+     5px 2px 15px var(--color-light-blue),
+      0px 2px 15px var(--color-light-blue),
+       -5px 2px 15px var(--color-light-blue);
+}
+
+@media (max-width: 768px) {
+    .goBackBtn {
+        font-size: 16px;
+    }
+
+    .goBackBtn span {
+        top: -19px;
+        left: -45px;
+    }
+}

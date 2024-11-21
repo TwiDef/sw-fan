@@ -1,0 +1,92 @@
+.list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr); 
+    justify-items: center;
+    row-gap: 50px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    cursor: pointer;
+}
+
+.cardLink {
+    display: block;
+}
+
+.card:hover {
+    -webkit-box-shadow: 0px 0px 26px 1px var(--color-light-red);
+    -moz-box-shadow: 0px 0px 26px 1px var(--color-light-red);
+    box-shadow: 0px 0px 26px 1px var(--color-light-red);
+}
+
+.card:hover .nameBlock {
+    padding: 16px;
+    background-color: var(--color-light-red);
+}
+
+.nameBlock {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 6px;
+    background-color: var(--color-white);
+    transition: all .2s ease-in-out;
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    color:  var(--color-black);
+}
+
+.img {
+    width: 100%;
+}
+
+@media (max-height: 800px)  {
+    .list {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        justify-items: center;
+        row-gap: 50px;
+    }
+
+    .card {
+        width: 160px;
+        font-size: 12px;
+    }
+
+    .card:hover .nameBlock {
+        padding: 10px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .card {
+        width: 140px;
+    }
+
+    .name {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .list {
+        margin-top: 15%;
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 40px;
+    }
+
+    .card {
+        width: 90px;
+    }
+
+    .name {
+        font-size: 8px;
+    }
+}

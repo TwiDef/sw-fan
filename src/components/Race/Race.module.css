@@ -1,0 +1,143 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+
+.wrapper {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ h2 {
+    text-shadow: 0px 2px 15px var(--color-light-blue),
+     5px 2px 15px var(--color-light-blue),
+      0px 2px 15px var(--color-light-blue),
+       -5px 2px 15px var(--color-light-blue);
+}
+
+.infoTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.infoTop h2 {
+    margin-bottom: 10px;
+}
+
+.image, .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info {
+    width: 440px;
+}
+
+.info ul {
+    margin-right: auto;
+}
+
+.info li {
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+.infoList {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.propertyTitle {
+    text-transform: uppercase;
+    color: var(--color-light-blue);
+    font-size: 24px;
+}
+
+.info li p {
+    font-size: 22px;
+}
+
+.image {
+    position: relative;
+}
+
+.photo {
+    width: 250px;
+}
+
+.CharInfo {
+    margin-top: 20px;
+}
+
+.CharInfo h2 {
+    text-align: center;    
+}
+
+.CharTitle {
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .image h2, .CharInfo h2, .info h2 {
+        font-size: 26px;
+    }
+
+    .photo {
+        width: 200px;
+    }
+
+    .info {
+        width: 300px;
+    }
+
+    .info ul {
+        margin-right: 0;
+    }
+
+    .info li p {
+        font-size: 17px;
+    }
+
+    .propertyTitle {
+        font-size: 16px;
+    }
+
+    .CharTitle {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .image h2, .CharInfo h2, .info h2 {
+        font-size: 18px;
+    }
+
+    .photo {
+        width: 140px;
+    }
+
+    .info {
+        width: 200px;
+    }
+
+    .info li p {
+        font-size: 12px;
+    }
+
+    .propertyTitle {
+        font-size: 12px;
+    }
+
+    .CharTitle {
+        margin-bottom: 10px;
+    }
+    
+}
+

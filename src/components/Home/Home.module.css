@@ -1,0 +1,85 @@
+@font-face {
+    font-family:"Star Jedi Hollow";
+    src: local("Star Jedi Hollow"),
+    url("./../../fonts/Starjhol.woff")
+}
+
+.wrapper {
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.wrapper:hover {
+    cursor: default;
+}
+
+.themeFontFirst, .themeFontSecond {
+    font-family:"Star Jedi Hollow";
+    font-size: 200px;
+    line-height: 220px;
+    color: var(--color-yellow);
+}
+
+.themeFontFirst {
+    padding-left: 34px;
+}
+
+.title {
+    position: absolute;
+    font-size: 50px;
+    top: 42%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+
+@media (max-height: 800px)  {
+    .wrapper {
+        margin-top: 50px
+    }
+}
+
+@media (max-height: 600px)  {
+    .wrapper {
+        margin-top: 30px
+    }
+
+    .themeFontFirst, .themeFontSecond {
+        font-size: 70px;
+        line-height: 70px;
+        color: var(--color-yellow);
+    }
+
+    .themeFontFirst {
+        padding-left: 17px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .wrapper {
+      margin-top: 30%;
+    }
+
+    .themeFontFirst, .themeFontSecond {
+        font-size: 100px;
+        line-height: 110px;
+        color: var(--color-yellow);
+    }
+
+    .themeFontFirst {
+        padding-left: 17px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+}
