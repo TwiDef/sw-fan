@@ -19,11 +19,13 @@ const Search = () => {
   const getResponse = async (param) => {
     try {
       const data = await getApiResource(GET_SEARCH + param)
+      console.log(data)
+
 
       if (data) {
         const list = data.results.map(({ name, url }) => {
-          const id = getNumFromStr(url)
-          const img = `${BASE_IMG_URL}/characters/${getNumFromStr(url)}.jpg`
+          const id = getNumFromStr((url).replace("https://swapi.py4e.com/api/people", ""))
+          const img = `${BASE_IMG_URL}/characters/${getNumFromStr(id)}.jpg`
           return { id, name, img }
         })
         dispatch(setSearchList(list))

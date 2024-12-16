@@ -54,7 +54,7 @@ const Film = () => {
           <Loader /> :
           <div className={styles.wrapper}>
             <div className={styles.poster}>
-              <img src={`${BASE_IMG_URL}/films/${getNumFromStr(singleFilm.url)}.jpg`} alt="film-poster" />
+              <img src={`${BASE_IMG_URL}/films/${filmId}.jpg`} alt="film-poster" />
             </div>
             <div className={styles.info}>
               <h3 className={styles.title}>

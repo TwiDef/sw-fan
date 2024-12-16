@@ -49,7 +49,8 @@ const Films = () => {
             {filmList && filmList.map((film, i) =>
               <li className={styles.card} key={film + i}>
                 <Link
-                  to={`/films/${getNumFromStr(film.url)}`}
+                  to={`/films/${getNumFromStr((film.url)
+                    .replace("https://swapi.py4e.com/api/films", ""))}`}
                   className={styles.cardLink}>
                   <div className={styles.nameBlock}>
                     <h4 className={styles.name}>
@@ -58,7 +59,8 @@ const Films = () => {
                   </div>
                   <img
                     className={styles.img}
-                    src={`${BASE_IMG_URL}/films/${getNumFromStr(film.url)}.jpg`}
+                    src={`${BASE_IMG_URL}/films/${getNumFromStr((film.url)
+                      .replace("https://swapi.py4e.com/api/films", ""))}.jpg`}
                     alt="film-img" />
                 </Link>
               </li>

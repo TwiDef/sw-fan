@@ -30,7 +30,6 @@ const Character = () => {
   const getCharacter = async (url) => {
     try {
       const data = await getApiResource(url)
-
       if (!data) {
         dispatch(setApiStatus(true))
       } else {
@@ -92,7 +91,7 @@ const Character = () => {
                   </button>
                   <img
                     className={styles.photo}
-                    src={`${BASE_IMG_URL}/characters/${getNumFromStr(singleCharacter.url)}.jpg`}
+                    src={`${BASE_IMG_URL}/characters/${id}.jpg`}
                     alt="char-img" />
                 </div>
                 <div className={styles.info}>

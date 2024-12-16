@@ -71,14 +71,16 @@ const Species = () => {
             {speciesList && speciesList.map((race, i) =>
               <li className={styles.card} key={race + i}>
                 <Link
-                  to={`/species/${getNumFromStr(race.url)}`}
+                  to={`/species/${getNumFromStr((race.url)
+                    .replace("https://swapi.py4e.com/api/species", ""))}`}
                   className={styles.cardLink}>
                   <div className={styles.nameBlock}>
                     <h4 className={styles.name}>{race.name}</h4>
                   </div>
                   <img
                     className={styles.img}
-                    src={`${BASE_IMG_URL}/species/${getNumFromStr(race.url)}.jpg`}
+                    src={`${BASE_IMG_URL}/species/${getNumFromStr((race.url)
+                      .replace("https://swapi.py4e.com/api/species", ""))}.jpg`}
                     alt="char-img" />
                 </Link>
               </li>

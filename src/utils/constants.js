@@ -1,4 +1,5 @@
-export const BASE_URL = 'https://swapi.dev/api/'
+/* export const BASE_URL = 'https://swapi.dev/api/' */
+export const BASE_URL = 'https://swapi.py4e.com/api/'
 export const GET_CHARACTERS = BASE_URL + 'people/'
 export const GET_FILMS = BASE_URL + 'films'
 export const PARAM_PAGE = '/?page='

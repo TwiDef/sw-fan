@@ -14,7 +14,8 @@ const FilmList = ({ films }) => {
           <li key={i}>
             <Link className={styles.link} to={`/films/${getNumFromStr(url)}`}>
               <div className={styles.imgWrapper}>
-                <img src={`${BASE_IMG_URL}/films/${getNumFromStr(url)}.jpg`} alt="film-img" />
+                <img src={`${BASE_IMG_URL}/films/${getNumFromStr((url)
+                  .replace("https://swapi.py4e.com/api/", ""))}.jpg`} alt="film-img" />
               </div>
               <div>
                 <h5>Episode: {getEpisodeSymbol(episode_id)}</h5>

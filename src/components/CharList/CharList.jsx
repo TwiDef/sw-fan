@@ -6,15 +6,18 @@ import { getNumFromStr, getEpisodeSymbol } from '@utils/helpers';
 import styles from './CharList.module.css';
 
 const CharList = ({ chars }) => {
+  console.log(chars)
 
   return (
     <ul className={styles.list}>
       {chars && chars.length > 0 ? chars.map(({ url, name }, i) => {
         return (
           <li key={i}>
-            <Link className={styles.link} to={`/characters/${getNumFromStr(url)}`}>
+            <Link className={styles.link} to={`/characters/${getNumFromStr((url)
+              .replace("https://swapi.py4e.com/api/people", ""))}`}>
               <div className={styles.imgWrapper}>
-                <img src={`${BASE_IMG_URL}/characters/${getNumFromStr(url)}.jpg`} alt="race-img" />
+                <img src={`${BASE_IMG_URL}/characters/${getNumFromStr((url)
+                  .replace("https://swapi.py4e.com/api/people", ""))}.jpg`} alt="race-img" />
               </div>
               <div>
                 <h6 className={styles.title}>{name}</h6>

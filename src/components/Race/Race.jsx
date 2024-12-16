@@ -72,7 +72,7 @@ const Race = () => {
                   <h2 className={styles.title}>{race.name}</h2>
                   <img
                     className={styles.photo}
-                    src={`${BASE_IMG_URL}/species/${getNumFromStr(race.url)}.jpg`}
+                    src={`${BASE_IMG_URL}/species/${id}.jpg`}
                     alt="char-img" />
                 </div>
                 <div className={styles.info}>
