@@ -19,8 +19,6 @@ const Search = () => {
   const getResponse = async (param) => {
     try {
       const data = await getApiResource(GET_SEARCH + param)
-      console.log(data)
-
 
       if (data) {
         const list = data.results.map(({ name, url }) => {

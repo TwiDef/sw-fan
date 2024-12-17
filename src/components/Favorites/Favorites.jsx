@@ -29,14 +29,16 @@ const Favorites = () => {
               {favorites && favorites.map((character, i) =>
                 <li className={styles.card} key={character + i}>
                   <Link
-                    to={`/characters/${getNumFromStr(character.url)}`}
+                    to={`/characters/${getNumFromStr((character.url)
+                      .replace("https://swapi.py4e.com/api/people", ""))}`}
                     className={styles.cardLink}>
                     <div className={styles.nameBlock}>
                       <h4 className={styles.name}>{character.name}</h4>
                     </div>
                     <img
                       className={styles.img}
-                      src={`${BASE_IMG_URL}/characters/${getNumFromStr(character.url)}.jpg`}
+                      src={`${BASE_IMG_URL}/characters/${getNumFromStr((character.url)
+                        .replace("https://swapi.py4e.com/api/people", ""))}.jpg`}
                       alt="char-img" />
                   </Link>
                 </li>
